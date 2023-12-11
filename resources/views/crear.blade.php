@@ -2,7 +2,7 @@
 
 @section('titulo')
 
-    Registrate en Exito
+    Registrar empleado
 
 @endsection
 
@@ -15,47 +15,24 @@
                     @csrf
                     <div class="mb-5">
                         <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">Nombre</label>
-                        <input type="text" name="name" id="name" placeholder="Nombre" class="border p-3 w-full rounded-lg @error('name')
-                        border-red-500 
-                        @enderror">
-
-                        @error('name')
-                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                        @enderror
+                        <input type="text" name="name" id="name" placeholder="Nombre" class="border p-3 w-full rounded-lg">
                     </div>
 
                     <div class="mb-5">
-                        <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">Correo</label>
-                        <input type="text" name="email" id="email" placeholder="Correo" class="border p-3 w-full rounded-lg @error ('email')
-                        border-red-500
-                        @enderror">
-
-                        @error('email')
-                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                        @enderror
+                        <label for="cedula" class="mb-2 block uppercase text-gray-500 font-bold">Cedula</label>
+                        <input type="number" name="cedula" id="cedula" placeholder="cedula" class="border p-3 w-full rounded-lg">
 
                     </div>
 
                     <div class="mb-5">
-                        <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="Contraseña" class="border p-3 w-full rounded-lg @error('password')
-                        border-red-500
-                        @enderror">
-
-                        @error('password')
-                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                        @enderror
+                        <label for="direccion" class="mb-2 block uppercase text-gray-500 font-bold">direccion</label>
+                        <input type="text" name="direccion" id="direccion" placeholder="direccion" class="border p-3 w-full rounded-lg">
 
                     </div>
-                    <div class="mb-5">
-                        <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold">Confirmar Contraseña</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirmar Contraseña" class="border p-3 w-full rounded-lg @error ('password-confirmation')
-                        border-red-500
-                        @enderror">
 
-                        @error('password_confirmation')
-                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}} </p>
-                        @enderror
+                    <div class="mb-5">
+                        <label for="telefono" class="mb-2 block uppercase text-gray-500 font-bold">telefono</label>
+                        <input type="text" name="telefono" id="telefono" placeholder="telefono" class="border p-3 w-full rounded-lg">
                     </div>
 
                     <input type="submit"   value="Crear Cuenta" class=" cuenta bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white">

@@ -10,7 +10,7 @@ class CrearController extends Controller
 
     public function index()
     {
-        return view('crear.index');
+        return view('crear');
     }
 
     /**
