@@ -63,30 +63,30 @@ class EmpleadoController extends Controller
      */
     public function edit(Request $request, int $id)
     {
-    //     $this->validate($request, [
-    //         "nombre" => 'required',
-    //         "cedula" => 'required|integer',
-    //         "direccion" => 'string',
-    //         "telefono" => 'string'
-    //     ]);
+         $this->validate($request, [
+             "nombre" => 'required',
+             "cedula" => 'required|integer',
+             "direccion" => 'string',
+             "telefono" => 'string'
+         ]);
 
-    //     $empleado = Empleado::where('id', '=', $id)->first();
-    //     $empleado->nombre = $request->nombre;
-    //     $empleado->cedula = $request->cedula;
-    //     $empleado->direccion = $request->direccion;
-    //     $empleado->telefono = $request->telefono;
+         $empleado = Empleado::where('id', '=', $id)->first();
+         $empleado->nombre = $request->nombre;
+         $empleado->cedula = $request->cedula;
+         $empleado->direccion = $request->direccion;
+         $empleado->telefono = $request->telefono;
 
-    //     $empleado->save();
+         $empleado->save();
 
-    //     return redirect()->route('home.index');
+         return redirect()->route('home.index');
 
-    // }
+     }
 
-    // public function delete(Int $id) {
-    //     $empleado = Empleado::where('id', '=', $id)->first();
-    //     $empleado->delete();
+     public function delete(Int $id) {
+         $empleado = Empleado::where('id', '=', $id)->first();
+         $empleado->delete();  //recuperar un empleado de la base de datos cuyo ID coincide con el valor proporcionado en la URL.
 
-    //     return redirect()->route('home.index');
+         return redirect()->route('home.index');
     }
 
 
@@ -94,14 +94,6 @@ class EmpleadoController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, Empleado $empleado)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Empleado $empleado)
     {
         //
     }

@@ -11,7 +11,7 @@
         <div class="md:flex md:justify-center md:gap-10 md:ítems-center">
             <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
 
-                <form action="{{ url('empleados.store') }}" method="POST">
+                <form action="{{ route('empleados.store') }}" method="POST">
                     @csrf
                     <div class="mb-5">
                         <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">Nombre</label>

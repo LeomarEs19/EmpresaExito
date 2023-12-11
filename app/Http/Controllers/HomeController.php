@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Home;
+use App\Models\Empleado;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +12,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $empleados = Empleado::all(); //recuperar todos los registros
+        return view('home', ["empleados" => $empleados]);//pasa los datos de empleados como una variable llamada "empleados" a esa vista
     }
 
     /**

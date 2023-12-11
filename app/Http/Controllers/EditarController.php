@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Empleado;
 use Illuminate\Http\Request;
 
-class CrearController extends Controller
+class EditarController extends Controller
 {
-
-    public function index()
+    
+    public function index(Int $id)//Declara un parámetro $id en el método
     {
-        return view('crear.index');
+        $empleado = Empleado::where('id', '=', $id)->first();
+        return view('editar', ["empleado" => $empleado]);
     }
 
     /**
@@ -32,7 +32,7 @@ class CrearController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Crear $crear)
+    public function show(string $id)
     {
         //
     }
@@ -40,7 +40,7 @@ class CrearController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Crear $crear)
+    public function edit(string $id)
     {
         //
     }
@@ -48,7 +48,7 @@ class CrearController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Crear $crear)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -56,7 +56,7 @@ class CrearController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Crear $crear)
+    public function destroy(string $id)
     {
         //
     }
