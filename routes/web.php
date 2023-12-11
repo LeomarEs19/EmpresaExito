@@ -37,7 +37,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/crear', [CrearController::class, 'index'])->name('crear');
 Route::post('/crear', [EmpleadosController::class, 'store'])->name('empleados.store');
 
-oute::get('/editar/{id}', [EditarController::class, 'index'])->name('editar.index');
+Route::get('/editar/{id}', [EditarController::class, 'index'])->name('editar.index');
 Route::post('/editar/{id}', [EmpleadosController::class, 'edit'])->name('editar.edit');
 
 Route::get('/eliminar/{id}', [EmpleadosController::class, 'delete'])->name('delete');
